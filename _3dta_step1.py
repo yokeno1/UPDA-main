@@ -86,14 +86,16 @@ def train(args, i_fold):
 
     # optimizer_backbone = optim.Adam(model[0].parameters(),lr=args.lr, weight_decay=1e-4)
     optimizer_backbone = optim.SGD(model[0].parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
-    optimizer_rank_net = optim.Adam(model[1].parameters(), lr=args.lr, weight_decay=1e-4)
+    optimizer_rank_net = optim.SGD(model[1].parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
+    # optimizer_rank_net = optim.Adam(model[1].parameters(), lr=args.lr, weight_decay=1e-4)
     optimizer = [optimizer_backbone, optimizer_rank_net]
     # print("Use Adam")
     # optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-4)
 
     scheduler_backbone = CosineAnnealingLR(optimizer[0], args.epochs, eta_min=args.lr)
+    scheduler_rank_net = CosineAnnealingLR(optimizer[1], args.epochs, eta_min=args.lr)
     # scheduler_backbone = StepLR(optimizer_backbone, step_size=args.decay_interval, gamma=args.decay_ratio)
-    scheduler_rank_net = StepLR(optimizer[1], step_size=args.decay_interval, gamma=args.decay_ratio)
+    # scheduler_rank_net = StepLR(optimizer[1], step_size=args.decay_interval, gamma=args.decay_ratio)
     scheduler = [scheduler_backbone, scheduler_rank_net]
 
     for epoch in range(args.epochs):

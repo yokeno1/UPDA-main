@@ -341,7 +341,7 @@ if __name__ == '__main__':
     parser.add_argument('--resume', type=str, default='checkpoint/gms/step1', help='path for loading the checkpoint')
     # parser.add_argument('--load_path', type=str, default='trained_ckpt/SJTU_fold_1_best.pth')
     # training parameters
-    parser.add_argument('--lr', type=float, default=1e-4)
+    parser.add_argument('--lr', type=float, default=1e-5)
     # parser.add_argument('--momentum', type=int, default=0.9)
     parser.add_argument('--loss', type=str, default='MSE')
     parser.add_argument('--decay_ratio', type=float, default=0.9)

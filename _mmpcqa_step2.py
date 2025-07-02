@@ -334,7 +334,7 @@ if __name__ == '__main__':
     parser.add_argument('--gpu', help="GPU device id to use [0]", default=0, type=int)
     parser.add_argument('--epochs', help='Maximum number of training epochs.', default=30, type=int)
     parser.add_argument('--batch_size', help='Batch size.', default=4, type=int)
-    parser.add_argument('--lr', default=5e-5, type=float, help='learning rate in training')
+    parser.add_argument('--lr', default=1e-5, type=float, help='learning rate in training')
     parser.add_argument('--decay_rate', type=float, default=1e-4, help='decay rate')
     parser.add_argument('--model', default='MM_PCQA', type=str)
     parser.add_argument('--patch_length_read', default=6, type=int, help='number of the using patches')

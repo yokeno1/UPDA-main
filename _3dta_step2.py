@@ -103,8 +103,8 @@ def train(args, i_fold):
 
     # optimizer_backbone = optim.Adam(model[0].parameters(), lr=args.lr, weight_decay=1e-4)
     optimizer_backbone = optim.SGD(model[0].parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
-    optimizer_fusion = optim.Adam(model[1].parameters(), lr=args.lr, weight_decay=1e-4)
-    optimizer_ad_net = optim.Adam(model[2].parameters(), lr=args.lr, weight_decay=1e-4)
+    optimizer_fusion =  optim.SGD(model[1].parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
+    optimizer_ad_net =  optim.SGD(model[2].parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
     # optimizer_qa_net = optim.Adam(model[3].parameters(), lr=args.lr, weight_decay=1e-4)
     optimizer_qa_net = optim.SGD(model[3].parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
 
@@ -113,15 +113,15 @@ def train(args, i_fold):
     # optimizer = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-4)
 
     scheduler_backbone = CosineAnnealingLR(optimizer[0], args.epochs, eta_min=args.lr)
-    # scheduler_fusion = CosineAnnealingLR(optimizer[1], args.epochs, eta_min=args.lr)
-    # scheduler_ad_net = CosineAnnealingLR(optimizer[2], args.epochs, eta_min=args.lr)
+    scheduler_fusion = CosineAnnealingLR(optimizer[1], args.epochs, eta_min=args.lr)
+    scheduler_ad_net = CosineAnnealingLR(optimizer[2], args.epochs, eta_min=args.lr)
     scheduler_qa_net = CosineAnnealingLR(optimizer[3], args.epochs, eta_min=args.lr)
     # scheduler_backbone = torch.optim.lr_scheduler.StepLR(optimizer[0], step_size=args.decay_interval,
     #                                                      gamma=args.decay_ratio)
-    scheduler_fusion = torch.optim.lr_scheduler.StepLR(optimizer[1], step_size=args.decay_interval,
-                                                         gamma=args.decay_ratio)
-    scheduler_ad_net = torch.optim.lr_scheduler.StepLR(optimizer[2], step_size=args.decay_interval,
-                                                         gamma=args.decay_ratio)
+    # scheduler_fusion = torch.optim.lr_scheduler.StepLR(optimizer[1], step_size=args.decay_interval,
+    #                                                      gamma=args.decay_ratio)
+    # scheduler_ad_net = torch.optim.lr_scheduler.StepLR(optimizer[2], step_size=args.decay_interval,
+    #                                                      gamma=args.decay_ratio)
     # scheduler_qa_net = torch.optim.lr_scheduler.StepLR(optimizer[3], step_size=args.decay_interval,
     #                                                      gamma=args.decay_ratio)
     scheduler = [scheduler_backbone, scheduler_fusion, scheduler_ad_net, scheduler_qa_net]
@@ -356,7 +356,7 @@ if __name__ == "__main__":
     parser.add_argument('--test_batch_size', type=int, default=16, metavar='batch_size', help='Size of batch)')
     parser.add_argument('--epochs', type=int, default=50, metavar='N', help='number of episode to train ')
     parser.add_argument('--use_sgd', type=bool, default=False, help='Use SGD')
-    parser.add_argument('--lr', type=float, default=1e-4, metavar='LR',
+    parser.add_argument('--lr', type=float, default=1e-5, metavar='LR',
                         help='learning rate (default: 0.001, 0.1 if using sgd)')
     parser.add_argument('--decay_ratio', type=float, default=0.9)
     parser.add_argument('--decay_interval', type=float, default=5)
