@@ -4,7 +4,7 @@ This is the official project  repository containing the implementation Code for 
 
 Our paper addresses the issue of the distribution shift across various point cloud quality databases and proposes methods to to improve the generalization performance of existing PCQA models.
 
-![image-20250702113844589](.\question.png)
+![image-20250702113844589](question.png)
 
 ### **Datasets**
 
