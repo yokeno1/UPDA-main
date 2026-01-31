@@ -11,7 +11,7 @@ redandblack_8.ply,7.24744898
 redandblack_9.ply,6.53125
 redandblack_10.ply,5.515625
 redandblack_11.ply,4.780769231
-redandblack_12.ply,7.767307692
+redandblack_12.ply,7.767307692000001
 redandblack_13.ply,6.803846154
 redandblack_14.ply,6.65
 redandblack_15.ply,5.1640625
@@ -28,13 +28,13 @@ redandblack_25.ply,7.3515625
 redandblack_26.ply,5.579081633
 redandblack_27.ply,2.4375
 redandblack_28.ply,2.275
-redandblack_29.ply,1
+redandblack_29.ply,1.0
 redandblack_30.ply,8.125
 redandblack_31.ply,6.441666667
 redandblack_32.ply,5.9609375
-redandblack_33.ply,3.394132653
+redandblack_33.ply,3.3941326530000007
 redandblack_34.ply,1.866666667
-redandblack_35.ply,1.848076923
+redandblack_35.ply,1.8480769229999998
 redandblack_36.ply,8.525
 redandblack_37.ply,6.063461538
 redandblack_38.ply,5.96875
@@ -49,7 +49,7 @@ Romanoillamp_4.ply,7.691326531
 Romanoillamp_5.ply,3.6171875
 Romanoillamp_6.ply,8.771683673
 Romanoillamp_7.ply,7.568877551
-Romanoillamp_8.ply,6.619897959
+Romanoillamp_8.ply,6.619897959000001
 Romanoillamp_9.ply,7.808333333
 Romanoillamp_10.ply,6.953125
 Romanoillamp_11.ply,6.2265625
@@ -61,7 +61,7 @@ Romanoillamp_16.ply,5.125
 Romanoillamp_17.ply,2.723076923
 Romanoillamp_18.ply,9.553571429
 Romanoillamp_19.ply,8.71875
-Romanoillamp_20.ply,7.296153846
+Romanoillamp_20.ply,7.296153845999999
 Romanoillamp_21.ply,6.198076923
 Romanoillamp_22.ply,6.667091837
 Romanoillamp_23.ply,2.6
@@ -72,7 +72,7 @@ Romanoillamp_27.ply,3.125
 Romanoillamp_28.ply,2.411989796
 Romanoillamp_29.ply,1.433333333
 Romanoillamp_30.ply,9.40625
-Romanoillamp_31.ply,7.008333333
+Romanoillamp_31.ply,7.008333333000001
 Romanoillamp_32.ply,6.166666667
 Romanoillamp_33.ply,3.93622449
 Romanoillamp_34.ply,3.7734375
@@ -85,10 +85,10 @@ Romanoillamp_40.ply,2.811538462
 Romanoillamp_41.ply,1.223076923
 loot_0.ply,6.996153846
 loot_1.ply,7.0859375
-loot_2.ply,5.383333333
-loot_3.ply,5.208333333
-loot_4.ply,6.679846939
-loot_5.ply,2.708333333
+loot_2.ply,5.3833333329999995
+loot_3.ply,5.208333332999999
+loot_4.ply,6.679846939000001
+loot_5.ply,2.7083333330000006
 loot_6.ply,9.65
 loot_7.ply,7.316666667
 loot_8.ply,5.396683673
@@ -99,7 +99,7 @@ loot_12.ply,8.267307692
 loot_13.ply,8.613520408
 loot_14.ply,7.676020408
 loot_15.ply,5.78125
-loot_16.ply,2.975
+loot_16.ply,2.9749999999999996
 loot_17.ply,1.85
 loot_18.ply,8.180769231
 loot_19.ply,6.925
@@ -107,12 +107,12 @@ loot_20.ply,4.8
 loot_21.ply,4.299744898
 loot_22.ply,2.283333333
 loot_23.ply,1.223076923
-loot_24.ply,7.190384615
+loot_24.ply,7.190384615000001
 loot_25.ply,7.28125
 loot_26.ply,4.166666667
 loot_27.ply,2.376923077
-loot_28.ply,1.703846154
-loot_29.ply,1
+loot_28.ply,1.7038461539999998
+loot_29.ply,1.0
 loot_30.ply,7.341666667
 loot_31.ply,7.765306122
 loot_32.ply,4.775
@@ -128,13 +128,13 @@ loot_41.ply,1.2
 soldier_0.ply,8.3203125
 soldier_1.ply,5.783333333
 soldier_2.ply,5.832692308
-soldier_3.ply,6.175
+soldier_3.ply,6.174999999999999
 soldier_4.ply,5.083333333
-soldier_5.ply,3.835459184
+soldier_5.ply,3.8354591839999994
 soldier_6.ply,9.583333333
 soldier_7.ply,6.950255102
 soldier_8.ply,5.813461538
-soldier_9.ply,6.069230769
+soldier_9.ply,6.069230769000001
 soldier_10.ply,4.516666667
 soldier_11.ply,3.909438776
 soldier_12.ply,7.615384615
@@ -150,12 +150,12 @@ soldier_21.ply,4.463461538
 soldier_22.ply,3.1640625
 soldier_23.ply,1.491666667
 soldier_24.ply,7.816666667
-soldier_25.ply,5.833333333
+soldier_25.ply,5.833333332999999
 soldier_26.ply,4.5546875
 soldier_27.ply,1.7265625
 soldier_28.ply,1.781887755
-soldier_29.ply,1
-soldier_30.ply,7.825
+soldier_29.ply,1.0
+soldier_30.ply,7.824999999999999
 soldier_31.ply,7.6640625
 soldier_32.ply,4.334615385
 soldier_33.ply,2.280769231
@@ -184,14 +184,14 @@ ULB Unicorn_13.ply,5.857692308
 ULB Unicorn_14.ply,6.226923077
 ULB Unicorn_15.ply,5.525510204
 ULB Unicorn_16.ply,3.5859375
-ULB Unicorn_17.ply,1.848076923
+ULB Unicorn_17.ply,1.8480769229999998
 ULB Unicorn_18.ply,6.841666667
 ULB Unicorn_19.ply,6.5703125
 ULB Unicorn_20.ply,5.141666667
 ULB Unicorn_21.ply,4.234375
-ULB Unicorn_22.ply,3.455769231
-ULB Unicorn_23.ply,1.37755102
-ULB Unicorn_24.ply,7.2
+ULB Unicorn_22.ply,3.4557692309999997
+ULB Unicorn_23.ply,1.3775510200000003
+ULB Unicorn_24.ply,7.199999999999999
 ULB Unicorn_25.ply,5.9296875
 ULB Unicorn_26.ply,4.6328125
 ULB Unicorn_27.ply,2.067602041
@@ -201,7 +201,7 @@ ULB Unicorn_30.ply,7.767857143
 ULB Unicorn_31.ply,7.155612245
 ULB Unicorn_32.ply,4.590561224
 ULB Unicorn_33.ply,2.609375
-ULB Unicorn_34.ply,1.857692308
+ULB Unicorn_34.ply,1.8576923080000003
 ULB Unicorn_35.ply,1.3
 ULB Unicorn_36.ply,8.375
 ULB Unicorn_37.ply,7.066326531
@@ -216,8 +216,8 @@ longdress_3.ply,5.5078125
 longdress_4.ply,7.117346939
 longdress_5.ply,3.40625
 longdress_6.ply,9.682692308
-longdress_7.ply,7.526923077
-longdress_8.ply,6.709615385
+longdress_7.ply,7.526923077000001
+longdress_8.ply,6.709615385000001
 longdress_9.ply,4.927295918
 longdress_10.ply,4.90625
 longdress_11.ply,4.091666667
@@ -240,20 +240,20 @@ longdress_27.ply,3.191666667
 longdress_28.ply,1.4453125
 longdress_29.ply,1.075
 longdress_30.ply,7.358333333
-longdress_31.ply,6.985969388
+longdress_31.ply,6.985969387999999
 longdress_32.ply,4.55
 longdress_33.ply,2.515625
 longdress_34.ply,1.987244898
-longdress_35.ply,1.448979592
+longdress_35.ply,1.4489795919999997
 longdress_36.ply,8.325
-longdress_37.ply,6.008333333
+longdress_37.ply,6.0083333329999995
 longdress_38.ply,4.825
 longdress_39.ply,2.330769231
 longdress_40.ply,1.783333333
 longdress_41.ply,1.433333333
 shiva_0.ply,6.558333333
 shiva_1.ply,7.834615385
-shiva_2.ply,7.767307692
+shiva_2.ply,7.767307692000001
 shiva_3.ply,5.991666667
 shiva_4.ply,6.6171875
 shiva_5.ply,3.262755102
@@ -262,7 +262,7 @@ shiva_7.ply,6.917091837
 shiva_8.ply,7.844230769
 shiva_9.ply,7.62244898
 shiva_10.ply,6.784615385
-shiva_11.ply,6.244897959
+shiva_11.ply,6.244897958999999
 shiva_12.ply,6.975
 shiva_13.ply,6.816666667
 shiva_14.ply,6.591666667
@@ -270,11 +270,11 @@ shiva_15.ply,6.331632653
 shiva_16.ply,5.943877551
 shiva_17.ply,3.4609375
 shiva_18.ply,7.401785714
-shiva_19.ply,6.833333333
+shiva_19.ply,6.833333333000001
 shiva_20.ply,7.9921875
 shiva_21.ply,6.001923077
 shiva_22.ply,5.0078125
-shiva_23.ply,2.955357143
+shiva_23.ply,2.9553571430000005
 shiva_24.ply,6.525
 shiva_25.ply,7.78125
 shiva_26.ply,5.724489796
@@ -284,11 +284,11 @@ shiva_29.ply,1.216666667
 shiva_30.ply,8.8359375
 shiva_31.ply,6.825
 shiva_32.ply,5.75
-shiva_33.ply,2.830769231
+shiva_33.ply,2.8307692309999997
 shiva_34.ply,2.320153061
 shiva_35.ply,1.600765306
 shiva_36.ply,7.084183673
-shiva_37.ply,6.673469388
+shiva_37.ply,6.673469387999999
 shiva_38.ply,5.828125
 shiva_39.ply,3.733333333
 shiva_40.ply,3.041666667
@@ -304,7 +304,7 @@ hhi_7.ply,6.776923077
 hhi_8.ply,6.107692308
 hhi_9.ply,6.140625
 hhi_10.ply,4.808333333
-hhi_11.ply,5.021153846
+hhi_11.ply,5.021153845999999
 hhi_12.ply,8.741666667
 hhi_13.ply,6.534615385
 hhi_14.ply,7.015625
@@ -313,20 +313,20 @@ hhi_16.ply,4.056122449
 hhi_17.ply,1.785714286
 hhi_18.ply,8.238461538
 hhi_19.ply,7.399234694
-hhi_20.ply,5.016666667
+hhi_20.ply,5.016666667000001
 hhi_21.ply,4.308333333
 hhi_22.ply,2.4453125
-hhi_23.ply,1.905769231
-hhi_24.ply,7.680769231
+hhi_23.ply,1.9057692310000003
+hhi_24.ply,7.680769230999999
 hhi_25.ply,6.366666667
 hhi_26.ply,4.5625
 hhi_27.ply,2.208333333
 hhi_28.ply,1.540384615
-hhi_29.ply,1
+hhi_29.ply,1.0
 hhi_30.ply,9.464285714
 hhi_31.ply,8.3125
 hhi_32.ply,6.836734694
-hhi_33.ply,3.475
+hhi_33.ply,3.4750000000000005
 hhi_34.ply,1.867307692
 hhi_35.ply,1.1953125
 hhi_36.ply,8.219230769

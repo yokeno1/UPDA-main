@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 from model.backbones import pointnet2, resnet50
 from model.transformer import TransformerEncoderLayer_CMA
-from .adaptation import AdversarialNetwork
-from .adaptation import fusion_net
-from .adaptation import rank_net
+from .adaptation_pairwise import AdversarialNetwork
+from .adaptation_pairwise import fusion_net
+from .adaptation_pairwise import rank_net
 
 class CMA_fusion(nn.Module):
     def __init__(self, img_inplanes, pc_inplanes, cma_planes=1024):

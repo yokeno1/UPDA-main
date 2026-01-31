@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from util import sample_and_group
-from model.adaptation import AdversarialNetwork
-from model.adaptation import fusion_net
-from model.adaptation import rank_net
+from model.adaptation_pairwise import AdversarialNetwork
+from model.adaptation_pairwise import fusion_net
+from model.adaptation_pairwise import rank_net
 
 
 class Local_op(nn.Module):

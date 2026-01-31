@@ -3,9 +3,9 @@ import torch.nn as nn
 import numpy as np
 
 from .swin_transformer import SwinTransformer as swint_tiny
-from .adaptation import AdversarialNetwork
-from .adaptation import fusion_net
-from .adaptation import rank_net
+from .adaptation_pairwise import AdversarialNetwork
+from .adaptation_pairwise import fusion_net
+from .adaptation_pairwise import rank_net
 
 
 import torch.nn as nn
@@ -45,64 +45,63 @@ class IQAHead(nn.Module):
         return qlt_score
 
 
-class GMS_3DQA(nn.Module):
-    def __init__(self, pretrained=True, checkpoint='path_to_checkpoint'):
-        super().__init__()
-        self.backbone = swint_tiny()
-        self.iqa_head = IQAHead()
-        self.mapping = mapping()
-        self.rank_ad_net = rank_net()
-        self.ad_net = AdversarialNetwork()
-        if pretrained:
-            self.load(self.backbone, checkpoint)
-        # print(self.backbone.state_dict())
-
-    def load(self, model, checkpoint):
-        state_dict = torch.load(checkpoint)
-        state_dict = state_dict["model"]
-        model.load_state_dict(state_dict, strict=False)
-
-    def forward(self, image, t_image, mos, if_train=True):
-        if if_train:
-            image_size = image.shape
-            image = image.view(-1, image_size[2], image_size[3], image_size[4])
-            t_image = t_image.view(-1, image_size[2], image_size[3], image_size[4])
-            feat = self.backbone(image)  ##(batch_size,49,768)
-            t_feat = self.backbone(t_image)
-
-            temp_feat, temp_t_feat = torch.mean(feat, dim=1), torch.mean(t_feat, dim=1)
-            rank_loss = self.rank_ad_net(temp_feat, temp_t_feat, mos)
-
-            feat_map, t_feat_map = self.mapping(feat, t_feat, if_fusion=False)
-
-            feat = self.iqa_head(feat)
-            avg_feat = torch.mean(feat, dim=1)
-            avg_feat = avg_feat.view(image_size[0], image_size[1])
-            score = torch.mean(avg_feat, dim=1)
-
-            feat = self.iqa_head(feat_map)
-            avg_feat = torch.mean(feat, dim=1)
-            avg_feat = avg_feat.view(image_size[0], image_size[1])
-            score_map = torch.mean(avg_feat, dim=1)
-
-
-            feat_map, t_feat_map = torch.mean(feat_map, dim=1), torch.mean(t_feat_map, dim=1)
-            domain_out = self.ad_net(feat_map)
-            domain2_out = self.ad_net(t_feat_map)
-            # print(score1, score2,)
-
-            return domain_out, domain2_out, score, score_map, rank_loss[0], rank_loss[1]
-
-        else:
-            image_size = image.shape
-            image = image.view(-1, image_size[2], image_size[3], image_size[4])
-            # image2 = image2.view(-1, image_size[2], image_size[3], image_size[4])
-            feat1 = self.backbone(image)  ##(batch_size,49,768)
-
-            feat = self.iqa_head(feat1)
-            avg_feat = torch.mean(feat, dim=1)
-            avg_feat = avg_feat.view(image_size[0], image_size[1])
-            score2 = torch.mean(avg_feat, dim=1)
-
-            return score2
+# class GMS_3DQA(nn.Module):
+#     def __init__(self, pretrained=False, checkpoint='path_to_checkpoint'):
+#         super().__init__()
+#         self.backbone = swint_tiny()
+#         self.iqa_head = IQAHead()
+#         self.rank_ad_net = rank_net()
+#         self.ad_net = AdversarialNetwork()
+#         if pretrained:
+#             self.load(self.backbone, checkpoint)
+#         # print(self.backbone.state_dict())
+#
+#     def load(self, model, checkpoint):
+#         state_dict = torch.load(checkpoint)
+#         state_dict = state_dict["model"]
+#         model.load_state_dict(state_dict, strict=False)
+#
+#     def forward(self, image, t_image, mos, if_train=True):
+#         if if_train:
+#             image_size = image.shape
+#             image = image.view(-1, image_size[2], image_size[3], image_size[4])
+#             t_image = t_image.view(-1, image_size[2], image_size[3], image_size[4])
+#             feat = self.backbone(image)  ##(batch_size,49,768)
+#             t_feat = self.backbone(t_image)
+#
+#             temp_feat, temp_t_feat = torch.mean(feat, dim=1), torch.mean(t_feat, dim=1)
+#             rank_loss = self.rank_ad_net(temp_feat, temp_t_feat, mos)
+#
+#             feat_map, t_feat_map = self.mapping(feat, t_feat, if_fusion=False)
+#
+#             feat = self.iqa_head(feat)
+#             avg_feat = torch.mean(feat, dim=1)
+#             avg_feat = avg_feat.view(image_size[0], image_size[1])
+#             score = torch.mean(avg_feat, dim=1)
+#
+#             feat = self.iqa_head(feat_map)
+#             avg_feat = torch.mean(feat, dim=1)
+#             avg_feat = avg_feat.view(image_size[0], image_size[1])
+#             score_map = torch.mean(avg_feat, dim=1)
+#
+#
+#             feat_map, t_feat_map = torch.mean(feat_map, dim=1), torch.mean(t_feat_map, dim=1)
+#             domain_out = self.ad_net(feat_map)
+#             domain2_out = self.ad_net(t_feat_map)
+#             # print(score1, score2,)
+#
+#             return domain_out, domain2_out, score, score_map, rank_loss[0], rank_loss[1]
+#
+#         else:
+#             image_size = image.shape
+#             image = image.view(-1, image_size[2], image_size[3], image_size[4])
+#             # image2 = image2.view(-1, image_size[2], image_size[3], image_size[4])
+#             feat1 = self.backbone(image)  ##(batch_size,49,768)
+#
+#             feat = self.iqa_head(feat1)
+#             avg_feat = torch.mean(feat, dim=1)
+#             avg_feat = avg_feat.view(image_size[0], image_size[1])
+#             score = torch.mean(avg_feat, dim=1)
+#
+#             return score
 
